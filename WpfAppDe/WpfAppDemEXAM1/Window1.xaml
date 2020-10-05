@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfAppDemEXAM1.ManagerSWindow" Name="ManagerSForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDemEXAM1"
+        mc:Ignorable="d"
+        Title="Менеджер С" Height="800" Width="1100">
+    <Grid>
+        <Label x:Name="Title" Content="Менеджер С" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Height="40" Margin="750,25,0,0" FontFamily="Arial" FontSize="16"/>
+        <DataGrid IsReadOnly="True" x:Name="DataGrid"  SelectedCellsChanged="SelectedRow" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="459,163,0,0" Width="622" Height="595" Background="Gray" FontFamily="Arial" FontSize="12" ItemsSource="{Binding}" SelectionChanged="DataGrid_SelectionChanged_1"/>
+        <Image Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85" Height="95" Source="Эмблема.png" Stretch="Fill" />
+        <TextBox x:Name="FilterTB" Width="381" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="149,50,0,0" FontFamily="Arial" FontSize="12" TextChanged="FilterTB_TextChanged" />
+        <Button x:Name="CityFilterBT" Width="160" Content="Город" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="25,113,0,0" Click="CityFilterBT_Click_1"/>
+        <Button x:Name="CanelFilterButton" Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="34" FontFamily="Arial" FontSize="12" Margin="378,113,0,0" Click="CanelFilterButton_Click"/>
+        <Button x:Name="StatusFilterBT_Copy" Width="160" Content="Статус ТЦ" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="213,113,0,0" Click="StatusFilterBT_Copy_Click" RenderTransformOrigin="0.491,0.518"/>
+        <Button x:Name="InsertBT" Width="100" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,163,0,0" Content="Добавить" FontFamily="Arial" FontSize="12" Click="InsertBT_Click" RenderTransformOrigin="0.097,0.869"/>
+        <TextBox MaxLength="20" x:Name="NameTB" Width="145" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="11,203,0,0" />
+        <TextBox MaxLength="12" x:Name="AmountTB" Width="146" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="10,317,0,0" />
+        <TextBox MaxLength="12" KeyDown="PriceKD" x:Name="Price" Width="145" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="10,435,0,0"/>
+        <TextBox MaxLength="12" x:Name="COEF" Width="145" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="10,493,0,0" />
+        <TextBox MaxLength="12" x:Name="Level" Width="145" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="10,552,0,0" />
+        <Label x:Name="NameL" Width="auto" Height="34" Content="Имя ТЦ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="167,203,0,0" FontFamily="Arial" FontSize="12"/>
+        <Label x:Name="StatusL"  Width="auto" Height="34" Content="Статус ТЦ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,259,0,0" FontFamily="Arial" FontSize="12" RenderTransformOrigin="0.427,1.226"/>
+        <Label x:Name="AmountL"  Width="auto" Height="35" Content="Количество Павильонов" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,317,0,0" FontFamily="Arial" FontSize="12"/>
+        <Label x:Name="CityL"  Width="auto" Height="34" Content="Город" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,384,0,0" FontFamily="Arial" FontSize="12"/>
+        <Label x:Name="priceL" Width="auto" Height="34" Content="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,435,0,0" FontFamily="Arial" FontSize="12"/>
+        <Label x:Name="COEFL"  Width="auto" Height="35" Content="Коэффициент" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,493,0,0" FontFamily="Arial" FontSize="12"/>
+        <Label x:Name="LevelL"  Width="auto" Height="34" Content="Этажи" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="179,552,0,0" FontFamily="Arial" FontSize="12"/>
+        <Button x:Name="DeleteBT" Content="Удалить" Height="35" Width="100" FontFamily="Arial" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="273,163,0,0" Click="DeleteBT_Click"/>
+        <Button x:Name="UpdateBT" Content="Редактировать" Height="35" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Margin="149,163,0,0" Click="UpdateBT_Click" RenderTransformOrigin="-0.395,0.869"/>
+        <Button x:Name="ToPavilions" Content="Павильоны" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Height="34" Width="auto" Margin="58,615,0,0" Click="ToPavilions_Click"/>
+        <Label Content="Ввдите Город или Статус" HorizontalAlignment="Left" Margin="167,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Margin="95,716,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click"/>
+        <ComboBox x:Name="Gorod" HorizontalAlignment="Left" Margin="25,384,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock>Казань</TextBlock>
+            <TextBlock>Челябинск</TextBlock>
+            <TextBlock>Ростов-на-Дону</TextBlock>
+            <TextBlock>Новосибирск</TextBlock>
+            <TextBlock>Самара</TextBlock>
+            <TextBlock>Екатеринбург</TextBlock>
+            <TextBlock>Санкт-Петербург</TextBlock>
+            <TextBlock>Нижний Новгород</TextBlock>
+            <TextBlock>Москва</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Plan" HorizontalAlignment="Left" Margin="25,259,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock>План</TextBlock>
+            <TextBlock>Строительсто</TextBlock>
+            <TextBlock>Реализация</TextBlock>
+            <TextBlock>Удален</TextBlock>
+            
+        </ComboBox>
+        
+        <TextBox x:Name="TextID" Height="23" Margin="308,258,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+    </Grid>
+</Window>

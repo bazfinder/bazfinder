@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfAppDemEXAM1.ManagAForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDemEXAM1"
+        mc:Ignorable="d"
+        Title="Window4" Height="600" Width="1000">
+    <Grid>
+        <DataGrid IsReadOnly="True" x:Name="DataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="473" Height="467" Background="Gray" Margin="440,93,0,0"  FontFamily="Arial" FontSize="12" ItemsSource="{Binding}" SelectedCellsChanged="SelectedRow"/>
+        <Label x:Name="Title" Content="МенеджеА" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="arial" FontSize="12" Margin="0,20,0,0"/>
+        <TextBox x:Name="NameTB" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="arial" FontSize="12" Width="150" Height="30" Margin="38,138,0,0"/>
+        <TextBox KeyDown="PhoneKD" MaxLength="15" x:Name="PhoneTB" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="arial" FontSize="12" Width="150" Height="30" Margin="38,180,0,0"/>
+        <TextBox x:Name="AdressTB" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="arial" FontSize="12" Width="150" Height="30" Margin="53,226,0,0"/>
+        <Label x:Name="NameLabel" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Имя" Margin="208,138,0,0" />
+        <Label x:Name="PhoneLabel" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Телефон" Margin="208,180,0,0"/>
+        <Label x:Name="AdressLabel" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Адрес" Margin="208,226,0,0"/>
+        <Button x:Name="UpdateBT" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Редактировать" Width="100" Height="25" Margin="248,93,0,0" Click="UpdateBT_Click"/>
+        <Button x:Name="DeleteBT" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Удалить" Width="100" Height="25" Margin="143,93,0,0" Click="DeleteBT_Click"/>
+        <Button x:Name="InsertBT" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Content="Добавить" Width="100" Height="25" Margin="38,93,0,0" Click="InsertBT_Click"/>
+        <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Margin="113,480,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click"/>
+        <TextBox x:Name="Statustb" HorizontalAlignment="Left" Height="23" Margin="53,287,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Statustb_TextChanged"/>
+
+    </Grid>
+</Window>

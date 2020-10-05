@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppDemEXAM1", "WpfAppDemEXAM1\WpfAppDemEXAM1.csproj", "{ED5AAC64-4149-46BE-A355-E18F991EB50F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED5AAC64-4149-46BE-A355-E18F991EB50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5AAC64-4149-46BE-A355-E18F991EB50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5AAC64-4149-46BE-A355-E18F991EB50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5AAC64-4149-46BE-A355-E18F991EB50F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50B4F8FF-D7B1-4DED-AF7A-C4B61E46A15D}
+	EndGlobalSection
+EndGlobal
